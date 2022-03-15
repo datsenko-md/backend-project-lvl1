@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,8 +22,11 @@
   },
   "homepage": "https://github.com/datsenko-md/backend-project-lvl1#readme",
   "dependencies": {
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
+    "prettier": "^2.5.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
