@@ -3,14 +3,10 @@ import greatingsDefault from './cli.js';
 
 const roundsCount = 3;
 
-const getRandomNumber = (digitsNum = 2) => Math.floor(Math.random() * 10 ** digitsNum);
-
-const playRound = () => {
-  const num = getRandomNumber();
-  const isEven = num % 2 === 0;
-  const correctAnswer = isEven ? 'yes' : 'no';
-  console.log(`Question: ${num}`);
-
+const playRound = (getQuestion, getCorrectAnswer) => {
+  const question = getQuestion();
+  const correctAnswer = getCorrectAnswer(question);
+  console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
   const isCorrectAnswer = answer === correctAnswer;
   const text = isCorrectAnswer ? 'Correct!' : `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`;
@@ -18,11 +14,11 @@ const playRound = () => {
   return isCorrectAnswer;
 };
 
-const play = () => {
+const play = (getQuestion, getCorrectAnswer) => {
   let i = 0;
   let isCorrectAnswer;
   do {
-    isCorrectAnswer = playRound();
+    isCorrectAnswer = playRound(getQuestion, getCorrectAnswer);
     i += 1;
   } while (isCorrectAnswer && i < roundsCount);
   return isCorrectAnswer;
@@ -33,16 +29,16 @@ const sayBye = (name, isWinner) => {
   console.log(`${text}, ${name}!`);
 };
 
-const greatings = () => {
+const greatings = (rules) => {
   const name = greatingsDefault();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log(rules);
   return name;
 };
 
-const playGame = () => {
-  const name = greatings();
-  const isWinner = play();
+export const playGame = (getQuestion, getCorrectAnswer, rules = '') => {
+  const name = greatings(rules);
+  const isWinner = play(getQuestion, getCorrectAnswer);
   sayBye(name, isWinner);
 };
 
-export default playGame;
+export const getRandomNumber = (digitsNum = 2) => Math.floor(Math.random() * 10 ** digitsNum);
