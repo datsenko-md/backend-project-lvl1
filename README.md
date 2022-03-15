@@ -6,8 +6,20 @@
 
 ---
 
-[Brain-even](https://asciinema.org/a/3CRntM6hq3k7DRSvlIaYLYLPT)
-[Brain-calc](https://asciinema.org/a/131FuOAmC7snWNmbhs0DfL3iN)
-[Brain-gcd](https://asciinema.org/a/vNEWNCj7TXVH8hlpDUL7mrlLF)
-[Brain-progression](https://asciinema.org/a/oAHshOTI04Q5UKnX3suqzwc8j)
-[Brain-prime](https://asciinema.org/a/aHD2Yap1LnNf5O4M9TRLNwStt)
+## Requirements
+
+* Node 13+
+
+## Installation
+
+* make install
+* sudo make link
+* brain-[ even | calc | gcd | prime | progression ]
+
+## Games
+
+* [Brain-even](https://asciinema.org/a/3CRntM6hq3k7DRSvlIaYLYLPT)
+* [Brain-calc](https://asciinema.org/a/131FuOAmC7snWNmbhs0DfL3iN)
+* [Brain-gcd](https://asciinema.org/a/vNEWNCj7TXVH8hlpDUL7mrlLF)
+* [Brain-progression](https://asciinema.org/a/oAHshOTI04Q5UKnX3suqzwc8j)
+* [Brain-prime](https://asciinema.org/a/aHD2Yap1LnNf5O4M9TRLNwStt)
