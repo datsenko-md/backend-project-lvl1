@@ -22,6 +22,6 @@ const getCorrectAnswer = (sequence) => {
     ? Number(progression[1]) - step : Number(progression[0]);
   return String(head + step * indexOfUnknownElement);
 };
-const rules = 'Find the greatest common divisor of given numbers.';
+const rules = 'What number is missing in the progression?';
 
 export { generateQuestion, getCorrectAnswer, rules };
