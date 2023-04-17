@@ -7,3 +7,4 @@
 ## Games
 
 * [brain-even](https://asciinema.org/a/mpJ2h6TjF3I6rqFtSWM8wsxXG)
+* [brain-calc](https://asciinema.org/a/7Bt8elNNcQ2PpCKT48QxAHmmt)
